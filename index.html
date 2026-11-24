@@ -1,12 +1,362 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crave Kitchen - Food Restaurant</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fffaf5;
+            color: #333;
+        }
+
+        /* Navigation */
+        header {
+            background: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px #ddd;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: #f15a24;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f15a24;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 8%;
+            gap: 30px;
+        }
+
+        .hero-text {
+            max-width: 550px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #f15a24;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #f15a24;
+            color: white;
+            padding: 14px 25px;
+            margin-top: 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #d94717;
+        }
+
+        .hero img {
+            width: 45%;
+            border-radius: 20px;
+        }
+
+        /* Menu Section */
+        .menu {
+            padding: 60px 8%;
+            text-align: center;
+            background: #fff1e8;
+        }
+
+        .menu h2 {
+            font-size: 35px;
+            margin-bottom: 35px;
+        }
+
+        .food-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .food-card {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px #ddd;
+        }
+
+        .food-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .food-card h3 {
+            margin: 15px 0;
+        }
+
+        .food-card p {
+            color: #f15a24;
+            font-weight: bold;
+        }
+
+        /* About Section */
+        .about {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 8%;
+            text-align: center;
+            background: #fff1e8;
+        }
+
+        .contact h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .contact input,
+        .contact textarea {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            padding: 14px;
+            margin: 12px auto;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 6px;
+                font-size: 14px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero img {
+                width: 100%;
+            }
+
+            .food-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>hello</h1>
-    <h2>hahahhahhahahaah</h2>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">Crave Kitchen</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+            <h1>Enjoy Delicious <span>Food!</span></h1>
+
+            <p>
+                Welcome to Crave Kitchen.
+                We serve fresh, delicious and healthy food
+                to make your day more special.
+            </p>
+
+            <a href="#menu" class="btn">Explore Menu</a>
+        </div>
+
+        <img
+            src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800"
+            alt="Delicious Pizza">
+
+    </section>
+
+    <!-- Food Menu -->
+    <section class="menu" id="menu">
+
+        <h2>Our Popular Food</h2>
+
+        <div class="food-container">
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600"
+                     alt="Burger">
+
+                <h3>Beef Burger</h3>
+                <p>Price: ৳320</p>
+
+                <button class="btn" onclick="orderFood('Beef Burger')">
+                    Order Now
+                </button>
+            </div>
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=600"
+                     alt="Pizza">
+
+                <h3>Cheese Pizza</h3>
+                <p>Price: ৳650</p>
+
+                <button class="btn" onclick="orderFood('Cheese Pizza')">
+                    Order Now
+                </button>
+            </div>
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600"
+                     alt="Pasta">
+
+                <h3>Italian Pasta</h3>
+                <p>Price: ৳390</p>
+
+                <button class="btn" onclick="orderFood('Italian Pasta')">
+                    Order Now
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <h2>About Our Restaurant</h2>
+
+        <p>
+            Crave Kitchen is a modern food restaurant.
+            We believe that good food brings people together.
+            Our mission is to provide delicious food,
+            quality service and a wonderful dining experience.
+        </p>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Crave Kitchen. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+
+        function orderFood(foodName) {
+            alert("Thank you! You selected " + foodName);
+        }
+
+        document.getElementById("contactForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            alert("Thank you for contacting us!");
+
+            this.reset();
+
+        });
+
+    </script>
+
 </body>
 </html>
